@@ -13,8 +13,6 @@ function printRoll(roll: string | number) {
 printRoll('786');
 printRoll(456);
 
-
-
 // Union using type alias.
 
 type FrontendDeveloper = "Junior Dev" | "Senior Dev";
