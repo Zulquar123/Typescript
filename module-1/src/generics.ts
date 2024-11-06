@@ -42,6 +42,38 @@
     }
 
 
+    interface Halwa<T>{
+        name: string;
+        age: number;
+        key: T;
+    }
+
+    function abcd(obj: Halwa<string>)
+    {
+        console.log(obj.name,obj.age,obj.key);
+    }
+    abcd({ name: "Zulquar", age: 34, key: 'XYZ' });
+
+
+    // Generics classes.
+    
+        class BottleMaker<T>
+        {
+            constructor(public key: T){}  
+        }
+        let b1 = new BottleMaker<String>("Hey");
+        console.log(b1);
+
+        let b2 = new BottleMaker<String>("Hello");
+    console.log(b2);
+    
+    // 
+    function xyz<T>(a: T, b: T): T{
+        return a;   // return "Hello hi" as T // return <T> "Key".
+    }
+    xyz<string>("Hey", "Hello");
+
+  
 
 
 
